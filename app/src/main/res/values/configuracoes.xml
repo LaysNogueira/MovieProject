@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="api_key">764d671e47f3770cb989f04888e71c50</string>
+    <string name="img_download_url">https://image.tmdb.org/t/p/w200/%s</string>
+    <string name="web_service_url">https://api.themoviedb.org/3/genre/movie/list?api_key=%s&amp;amp;language=%s</string>
+    <string name="web_service_url_filmes">https://api.themoviedb.org/3/discover/movie?api_key=%s&amp;language=%s&amp;sort_by=popularity.desc&amp;with_genres=%s</string>
+    <string name="web_service_url_detalhes">https://api.themoviedb.org/3/movie/%s?api_key=%s&amp;language=%s</string>
+</resources>
