@@ -1,6 +1,7 @@
 package com.example.familiavale.movieproject;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -33,6 +34,8 @@ public class FilmesActivity extends AppCompatActivity {
     private List<Filmes> filmes;
     private FilmeArrayAdapter adapterFilme;
     private ListView filmeListView;
+
+    private ProgressDialog dialog;
 
 
     @Override
@@ -76,6 +79,12 @@ public class FilmesActivity extends AppCompatActivity {
     private class ObtemFilmes extends
             AsyncTask<String, Void, String> {
 
+        protected void onPreExecute() {
+            dialog = new ProgressDialog(FilmesActivity.this);
+            dialog.setCancelable(true);
+            dialog.setMessage("Buscando filmes. Por favor, aguarde...");
+            dialog.show();
+        }
         @Override
         protected String doInBackground(String... enderecos) {
             try{
@@ -104,6 +113,8 @@ public class FilmesActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String jsonS) {
+            dialog.cancel();
+            super.onPostExecute(jsonS);
             try{
                 filmes.clear();
                 JSONObject json = new JSONObject(jsonS);

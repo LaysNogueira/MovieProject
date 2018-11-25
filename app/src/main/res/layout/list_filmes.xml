@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/filme_condition_image"
         android:scaleType="fitCenter"
-        app:srcCompat="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_launcher_foreground" />
 
     <GridLayout
         android:layout_width="0dp"

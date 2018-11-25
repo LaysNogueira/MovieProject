@@ -48,6 +48,8 @@ public class DetalhesFilmeActivity extends AppCompatActivity {
         Bitmap figura = FilmeArrayAdapter.getFiguras().get(icon);
         filmeImageView.setImageBitmap(figura);
 
+
+
         detalhesTextView = findViewById(R.id.detalhes);
         detalhesTextView.setText(detalhes);
 
