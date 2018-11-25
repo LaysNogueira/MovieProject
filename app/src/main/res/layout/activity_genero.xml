@@ -25,5 +25,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_weight="1"
+        android:paddingLeft="@dimen/padd"
+        android:paddingRight="@dimen/padd"
+        android:paddingBottom="@dimen/padd"
         android:textAlignment="center" />
 </LinearLayout>

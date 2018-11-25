@@ -24,8 +24,12 @@ import java.util.Map;
 
 public class FilmeArrayAdapter extends ArrayAdapter <Filmes>{
 
-    private Map <String, Bitmap> figuras =
+    private static Map <String, Bitmap> figuras =
             new HashMap<>();
+
+    public static Map<String, Bitmap> getFiguras() {
+        return figuras;
+    }
 
     public FilmeArrayAdapter(@NonNull Context context, List<Filmes> filmes) {
         super(context, -1, filmes);
@@ -34,7 +38,7 @@ public class FilmeArrayAdapter extends ArrayAdapter <Filmes>{
     private class ViewHolder {
         public ImageView filmeImageView;
         public TextView nomeFilme;
-        public TextView popularity;
+        public TextView lancamento;
         public TextView voto;
     }
 
@@ -52,7 +56,7 @@ public class FilmeArrayAdapter extends ArrayAdapter <Filmes>{
             viewHolder = new ViewHolder();
             convertView.setTag(viewHolder);
             viewHolder.nomeFilme= convertView.findViewById(R.id.nomeFilme);
-            viewHolder.popularity = convertView.findViewById(R.id.popularidadeTextView);
+            viewHolder.lancamento = convertView.findViewById(R.id.lancamento);
             viewHolder.voto = convertView.findViewById(R.id.votoTextView);
             viewHolder.filmeImageView = convertView.findViewById(R.id.conditionImageView);
         }
@@ -68,8 +72,7 @@ public class FilmeArrayAdapter extends ArrayAdapter <Filmes>{
         }
 
         viewHolder.nomeFilme.setText(context.getString(R.string.filme, caraDaVez.nomeFilme));
-        viewHolder.popularity.setText(context.getString(R.string.popularity, caraDaVez.popularidade));
-        viewHolder.voto.setText(context.getString(R.string.popularity, caraDaVez.popularidade));
+        viewHolder.lancamento.setText(context.getString(R.string.lancamento, caraDaVez.lancamento));
         viewHolder.voto.setText(context.getString(R.string.voto, caraDaVez.voto));
         return convertView;
     }

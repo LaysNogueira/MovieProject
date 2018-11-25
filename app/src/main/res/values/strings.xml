@@ -4,8 +4,9 @@
     <string name="action_settings">Settings</string>
     <string name="url_invalida">Invalid URL </string>
     <string name="genero">%s</string>
+    <string name="detalhes">%s</string>
     <string name="filme">%s</string>
-    <string name="popularity">Popularidade: %s</string>
+    <string name="lancamento">Lançamento: %s</string>
     <string name="voto">Avaliação: %s</string>
     <string name="erro_leitura">Could not read data</string>
     <string name="erro_conexao">Could not connect to server</string>

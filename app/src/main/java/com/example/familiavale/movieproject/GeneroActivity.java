@@ -1,13 +1,16 @@
 package com.example.familiavale.movieproject;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -50,6 +53,8 @@ public class GeneroActivity extends AppCompatActivity {
                         getString(R.string.lang));
         new ObtemGeneros().execute(endereco);
 
+
+
         generoListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -68,7 +73,6 @@ public class GeneroActivity extends AppCompatActivity {
 
     private class ObtemGeneros extends
             AsyncTask<String, Void, String> {
-
         @Override
         protected String doInBackground(String... enderecos) {
             try{

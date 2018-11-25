@@ -13,5 +13,8 @@
         android:id="@+id/filmeListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"></ListView>
+
 </LinearLayout>

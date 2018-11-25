@@ -2,11 +2,14 @@ package com.example.familiavale.movieproject;
 
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FilmesActivity extends AppCompatActivity {
-    public TextView nomeFilme, popularity, voto;
+    public TextView nomeFilme, lancamento, voto;
     private List<Filmes> filmes;
     private FilmeArrayAdapter adapterFilme;
     private ListView filmeListView;
@@ -38,11 +41,11 @@ public class FilmesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_filmes);
         filmes = new ArrayList<>();
 
-       Bundle bundle = getIntent().getExtras();
-       int idGenero = bundle.getInt(    "idGenero");
-       String idG = Integer.toString(idGenero);
+        Bundle bundle = getIntent().getExtras();
+        int idGenero = bundle.getInt(    "idGenero");
+        String idG = Integer.toString(idGenero);
         nomeFilme = findViewById(R.id.nomeFilme);
-        popularity = findViewById(R.id.popularidadeTextView);
+        lancamento = findViewById(R.id.lancamento);
         voto = findViewById(R.id.votoTextView);
         adapterFilme = new FilmeArrayAdapter(this, filmes);
         filmeListView= findViewById(R.id.filmeListView);
@@ -55,10 +58,14 @@ public class FilmesActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Filmes filme = (Filmes) filmeListView.getItemAtPosition(position);
-                int idFilme = filme.id;
+                String detalhes = filme.detalhes;
+                String icon = filme.iconName;
+                String nomeFilme = filme.nomeFilme;
                 Intent intent = new Intent(com.example.familiavale.movieproject.FilmesActivity.this, com.example.familiavale.movieproject.DetalhesFilmeActivity.class);
 
-                intent.putExtra("idFilme", idFilme);
+                intent.putExtra("nomeFilme", nomeFilme);
+                intent.putExtra("detalhes", detalhes);
+                intent.putExtra("icon", icon);
 
                 startActivity(intent);
             }
@@ -104,11 +111,12 @@ public class FilmesActivity extends AppCompatActivity {
                 for (int i = 0; i < list.length(); i++){
                     JSONObject filme = list.getJSONObject(i);
                     String nFilme= filme.getString("title");
-                    String popul=filme.getString("popularity");
+                    String lancamento =filme.getString("release_date");
                     String voto = filme.getString("vote_average");
                     String icon = filme.getString("poster_path");
+                    String detalhes = filme.getString("overview");
                     int id = filme.getInt("id");
-                    Filmes f = new Filmes(id, nFilme, popul, voto, icon);
+                    Filmes f = new Filmes(id, nFilme, lancamento, voto, icon, detalhes);
                     filmes.add(f);
                 }
                 adapterFilme.notifyDataSetChanged();
