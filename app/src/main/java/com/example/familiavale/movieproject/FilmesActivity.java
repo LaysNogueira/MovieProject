@@ -70,11 +70,13 @@ public class FilmesActivity extends AppCompatActivity {
                 String detalhes = filme.detalhes;
                 String icon = filme.iconName;
                 String nomeFilme = filme.nomeFilme;
+                int idFilme = filme.id;
                 Intent intent = new Intent(com.example.familiavale.movieproject.FilmesActivity.this, com.example.familiavale.movieproject.DetalhesFilmeActivity.class);
 
                 intent.putExtra("nomeFilme", nomeFilme);
                 intent.putExtra("detalhes", detalhes);
                 intent.putExtra("icon", icon);
+                intent.putExtra("idFilme", idFilme);
 
                 startActivity(intent);
             }

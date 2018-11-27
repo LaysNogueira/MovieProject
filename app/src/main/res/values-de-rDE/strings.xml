@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Movie Project</string>
+    <string name="app_name">Movie Now</string>
     <string name="filme_condition_image">Fotodarstellung des Films</string>
     <string name="action_settings">die Einstellungen</string>
     <string name="url_invalida">ungültige URL</string>
@@ -12,8 +12,7 @@
     <string name="erro_leitura">Daten konnten nicht gelesen werden</string>
     <string name="erro_conexao">Verbindung zum Server konnte nicht hergestellt werden</string>
     <string name="lang">de-DE</string>
-    <string name="title_activity_detalhes_filme">DetalhesFilmeActivity</string>
-    <string name="bemVindo">Willkommen beim App-Namen. Wählen Sie eine Suchoption:</string>
+    <string name="bemVindo">Willkommen beim Movies Now. Wählen Sie eine Suchoption:</string>
     <string name="btnFilme">Film</string>
     <string name="btnTv">TV</string>
     <string name="escolherGenero">Wähle ein Genre</string>
