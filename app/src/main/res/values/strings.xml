@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Movie Project</string>
     <string name="filme_condition_image">Photo representation of movie</string>
@@ -6,10 +7,14 @@
     <string name="genero">%s</string>
     <string name="detalhes">%s</string>
     <string name="filme">%s</string>
-    <string name="lancamento">Lançamento: %s</string>
-    <string name="voto">Avaliação: %s</string>
+    <string name="lancamento">Launch: %s</string>
+    <string name="voto">Evaluation: %s</string>
     <string name="erro_leitura">Could not read data</string>
     <string name="erro_conexao">Could not connect to server</string>
     <string name="lang">en-Us</string>
     <string name="title_activity_detalhes_filme">DetalhesFilmeActivity</string>
+    <string name="bemVindo">Welcome to the app name. Choose a search option:</string>
+    <string name="btnFilme">Movie</string>
+    <string name="btnTv">TV</string>
+    <string name="escolherGenero">Choose a genre</string>
 </resources>

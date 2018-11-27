@@ -1,19 +1,14 @@
 package com.example.familiavale.movieproject;
 
-
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,8 +24,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FilmesActivity extends AppCompatActivity {
-    // filmes
+public class TvActivity extends AppCompatActivity {
+
     public TextView nomeFilme, lancamento, voto;
     private List<Filmes> filmes;
     private FilmeArrayAdapter adapterFilme;
@@ -38,14 +33,11 @@ public class FilmesActivity extends AppCompatActivity {
 
     private ProgressDialog dialog;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_filmes);
+        setContentView(R.layout.activity_tv);
         filmes = new ArrayList<>();
-
-        Bundle bundle = getIntent().getExtras();
 
         nomeFilme = findViewById(R.id.nomeFilme);
         lancamento = findViewById(R.id.lancamento);
@@ -54,12 +46,8 @@ public class FilmesActivity extends AppCompatActivity {
         filmeListView= findViewById(R.id.filmeListView);
         filmeListView.setAdapter(adapterFilme);
 
-
-        int idGenero = bundle.getInt(    "idGenero");
-        String idG = Integer.toString(idGenero);
-
-        String endereco = getString(R.string.web_service_url_filmes, getString(R.string.api_key), getString(R.string.lang), idG);
-        new ObtemFilmes().execute(endereco);
+        String endereco = getString(R.string.web_service_url_tv, getString(R.string.api_key), getString(R.string.lang));
+        new ObtemTv().execute(endereco);
 
 
 
@@ -70,7 +58,7 @@ public class FilmesActivity extends AppCompatActivity {
                 String detalhes = filme.detalhes;
                 String icon = filme.iconName;
                 String nomeFilme = filme.nomeFilme;
-                Intent intent = new Intent(com.example.familiavale.movieproject.FilmesActivity.this, com.example.familiavale.movieproject.DetalhesFilmeActivity.class);
+                Intent intent = new Intent(com.example.familiavale.movieproject.TvActivity.this, com.example.familiavale.movieproject.DetalhesFilmeActivity.class);
 
                 intent.putExtra("nomeFilme", nomeFilme);
                 intent.putExtra("detalhes", detalhes);
@@ -82,11 +70,11 @@ public class FilmesActivity extends AppCompatActivity {
 
     }
 
-    private class ObtemFilmes extends
+    private class ObtemTv extends
             AsyncTask<String, Void, String> {
 
         protected void onPreExecute() {
-            dialog = new ProgressDialog(FilmesActivity.this);
+            dialog = new ProgressDialog(TvActivity.this);
             dialog.setCancelable(true);
             dialog.setMessage("Buscando. Por favor, aguarde...");
             dialog.show();
@@ -127,8 +115,8 @@ public class FilmesActivity extends AppCompatActivity {
                 JSONArray list = json.getJSONArray("results");
                 for (int i = 0; i < list.length(); i++){
                     JSONObject filme = list.getJSONObject(i);
-                    String nFilme= filme.getString("title");
-                    String lancamento =filme.getString("release_date");
+                    String nFilme= filme.getString("name");
+                    String lancamento =filme.getString("first_air_date");
                     String voto = filme.getString("vote_average");
                     String icon = filme.getString("poster_path");
                     String detalhes = filme.getString("overview");

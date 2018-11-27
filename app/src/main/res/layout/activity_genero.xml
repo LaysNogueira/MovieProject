@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF6C7B9"
     android:orientation="vertical"
-    tools:context=".GeneroActivity">
+    tools:context=".GeneroActivity"
+    android:useDefaultMargins="true">
 
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="7dp"
-        android:text="Escolha um gênero:"
+        android:text="@string/escolherGenero"
         android:textColor="?android:attr/colorForeground"
         android:textSize="20dp" />
 

@@ -1,5 +1,6 @@
 package com.example.familiavale.movieproject;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -33,6 +34,7 @@ public class GeneroActivity extends AppCompatActivity {
     private GeneroArrayAdapter adapter;
     private ListView generoListView;
 
+    private ProgressDialog dialog;
 
 
     @Override
@@ -73,6 +75,13 @@ public class GeneroActivity extends AppCompatActivity {
 
     private class ObtemGeneros extends
             AsyncTask<String, Void, String> {
+
+        protected void onPreExecute() {
+            dialog = new ProgressDialog(GeneroActivity.this);
+            dialog.setCancelable(true);
+            dialog.setMessage("Buscando. Por favor, aguarde...");
+            dialog.show();
+        }
         @Override
         protected String doInBackground(String... enderecos) {
             try{
@@ -101,6 +110,8 @@ public class GeneroActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String jsonS) {
+            dialog.cancel();
+            super.onPostExecute(jsonS);
             try{
                 generos.clear();
                 JSONObject json = new JSONObject(jsonS);

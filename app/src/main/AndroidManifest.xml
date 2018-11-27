@@ -8,20 +8,20 @@
 
     <application
         android:allowBackup="true"
+        android:configChanges="orientation|screenSize"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GeneroActivity"
-            android:theme="@style/MovieTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
-        <activity android:name=".FilmesActivity" />
+
         <activity
             android:name=".DetalhesFilmeActivity"
             android:label="@string/title_activity_detalhes_filme"
@@ -30,6 +30,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".FilmesActivity" />
+        <activity android:name=".TvActivity" />
+        <activity android:name=".GeneroActivity"></activity>
     </application>
 
 </manifest>

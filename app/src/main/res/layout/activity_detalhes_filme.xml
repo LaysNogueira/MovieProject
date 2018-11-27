@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF6C7B9"
     android:orientation="vertical"
     tools:context=".DetalhesFilmeActivity">
 
@@ -13,13 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnCount="2"
-        android:rowCount="3">
+        android:rowCount="3"
+        android:layout_margin="8dp">
 
 
         <ImageView
             android:id="@+id/conditionImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
             android:layout_row="0"
             android:layout_rowSpan="1"
             android:layout_columnSpan="2"
