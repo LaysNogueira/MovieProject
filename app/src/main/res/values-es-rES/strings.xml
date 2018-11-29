@@ -12,8 +12,8 @@
     <string name="erro_leitura">No se pudo leer los datos</string>
     <string name="erro_conexao">No se pudo conectar al servidor</string>
     <string name="lang">es-ES</string>
-    <string name="bemVindo">Welcome to the Movies Now. Choose a search option:</string>
-    <string name="btnFilme">Película</string>
-    <string name="btnTv">TV</string>
+    <string name="bemVindo">Bienvenido a las películas ahora. Elija una opción de búsqueda:</string>
+    <string name="btnFilme">Cine</string>
+    <string name="btnTv">Serie</string>
     <string name="escolherGenero">Elija un género</string>
 </resources>

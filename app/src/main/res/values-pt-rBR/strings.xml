@@ -13,7 +13,7 @@
     <string name="erro_conexao">Não pode conectar ao servidor</string>
     <string name="lang">pt-BR</string>
     <string name="bemVindo">Bem-vindo ao Movies Now. Escolha uma opção de pesquisa:</string>
-    <string name="btnFilme">Filme</string>
-    <string name="btnTv">TV</string>
+    <string name="btnFilme">Filmes</string>
+    <string name="btnTv">Séries</string>
     <string name="escolherGenero">Escolha um gênero</string>
 </resources>

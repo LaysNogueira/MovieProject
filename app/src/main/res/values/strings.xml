@@ -13,7 +13,7 @@
     <string name="erro_conexao">Could not connect to server</string>
     <string name="lang">en-Us</string>
     <string name="bemVindo">Welcome to the Movies Now. Choose a search option:</string>
-    <string name="btnFilme">Movie</string>
-    <string name="btnTv">TV</string>
+    <string name="btnFilme">Movies</string>
+    <string name="btnTv">Series</string>
     <string name="escolherGenero">Choose a genre</string>
 </resources>

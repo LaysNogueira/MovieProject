@@ -1,6 +1,9 @@
 package com.example.familiavale.movieproject;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btnFilmes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(com.example.familiavale.movieproject.MainActivity.this, com.example.familiavale.movieproject.GeneroActivity.class);
                 startActivity(intent);
             }

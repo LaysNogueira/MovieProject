@@ -13,7 +13,7 @@
     <string name="erro_conexao">Verbindung zum Server konnte nicht hergestellt werden</string>
     <string name="lang">de-DE</string>
     <string name="bemVindo">Willkommen beim Movies Now. Wählen Sie eine Suchoption:</string>
-    <string name="btnFilme">Film</string>
-    <string name="btnTv">TV</string>
+    <string name="btnFilme">Filme</string>
+    <string name="btnTv">Serie</string>
     <string name="escolherGenero">Wähle ein Genre</string>
 </resources>
