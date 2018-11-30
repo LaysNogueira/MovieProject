@@ -64,6 +64,21 @@
             android:text="@string/btnTv"
             android:textColor="@android:color/background_dark"
             android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/sselector_button"
+            android:elevation="10dp"
+            android:fontFamily="@font/actor"
+            android:padding="@dimen/fab_margin"
+            android:text="@string/sobre"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
+
+
     </GridLayout>
 
 </LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sobre">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:columnCount="2">
+
+        <TextView
+            android:id="@+id/criadopor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:padding="@dimen/padd"
+            android:text="@string/criadores"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageLays"
+            android:layout_columnSpan="2"
+            android:layout_gravity="left|center_horizontal|fill_horizontal"
+            android:layout_marginTop="35dp"
+            android:elevation="@dimen/padd"
+            android:padding="@dimen/padd"
+            app:srcCompat="@mipmap/lays" />
+
+        <TextView
+            android:id="@+id/nomeLays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal|fill_horizontal"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:padding="@dimen/padd"
+            android:text="@string/lays"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+
+        <ImageView
+            android:id="@+id/imageLuiz"
+            android:layout_columnSpan="2"
+            android:layout_gravity="left|center_horizontal|fill_horizontal"
+            android:elevation="@dimen/padd"
+            android:padding="@dimen/padd"
+            app:srcCompat="@mipmap/luiz" />
+
+        <TextView
+            android:id="@+id/nomeLuiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal|fill_horizontal"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:padding="@dimen/padd"
+            android:text="@string/luiz"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+    </GridLayout>
+</LinearLayout>

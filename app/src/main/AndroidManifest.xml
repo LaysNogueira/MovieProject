@@ -15,15 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/MovieTheme">
         <activity android:name=".MainActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
-        <activity
-            android:name=".DetalhesFilmeActivity"/>
+        <activity android:name=".DetalhesFilmeActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -31,7 +29,8 @@
 
         <activity android:name=".FilmesActivity" />
         <activity android:name=".TvActivity" />
-        <activity android:name=".GeneroActivity"></activity>
+        <activity android:name=".GeneroActivity" />
+        <activity android:name=".Sobre"></activity>
     </application>
 
 </manifest>

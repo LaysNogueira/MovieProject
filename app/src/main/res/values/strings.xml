@@ -16,4 +16,8 @@
     <string name="btnFilme">Movies</string>
     <string name="btnTv">Series</string>
     <string name="escolherGenero">Choose a genre</string>
+    <string name="sobre">About</string>
+    <string name="lays">Lays Nogueira do Vale</string>
+    <string name="luiz">Luiz Felipe de Jesus</string>
+    <string name="criadores">Created by:</string>
 </resources>

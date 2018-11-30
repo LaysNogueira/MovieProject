@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnFilmes = findViewById(R.id.btnFilme);
         Button btnTv = findViewById(R.id.btnTv);
+        Button btnSobre = findViewById(R.id.btnSobre);
 
         btnFilmes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(com.example.familiavale.movieproject.MainActivity.this, com.example.familiavale.movieproject.TvActivity.class));
+            }
+        });
+        btnSobre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(com.example.familiavale.movieproject.MainActivity.this, com.example.familiavale.movieproject.Sobre.class);
+                startActivity(intent);
             }
         });
     }

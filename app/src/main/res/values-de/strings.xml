@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="sobre">Sobre</string>
+    <string name="lays">Lays Nogueira do Vale</string>
+    <string name="luiz">Luiz Felipe de Jesus</string>
+    <string name="criadores">Criado por:</string>
 </resources>

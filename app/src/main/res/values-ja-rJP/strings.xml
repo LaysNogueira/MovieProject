@@ -16,4 +16,8 @@
     <string name="btnFilme">映画</string>
     <string name="btnTv">テレビ</string>
     <string name="escolherGenero">ジャンルを選択</string>
+    <string name="sobre">について</string>
+    <string name="lays">Lays Nogueira do Vale</string>
+    <string name="luiz">Luiz Felipe de Jesus</string>
+    <string name="criadores">作成者：</string>
 </resources>
