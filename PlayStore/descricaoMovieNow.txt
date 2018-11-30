@@ -1,0 +1,7 @@
+Título: Movie Now
+
+Desc. sucinta: Movie Now oferece uma lista dos filmes e séries mais recentes no cinema e na tv.
+
+Desc. abrangente: 
+O aplicativo Movie Now foi desenvolvido por alunos da unidade de ensino superior Fatec Ipiranga, orientados pelo professor da disciplina de Programação para Dispositivos Móveis, como trabalho a ser concluído e entregue para a avaliação final dos alunos dessa disciplina. O aplicativo oferece uma lista dos filmes e séries mais recentes no cinema e na tv, informando também a avaliação do filme, sua data de lançamento - todos separados por gêneros - e sua descrição.
+
